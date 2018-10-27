@@ -1,0 +1,7 @@
+
+.column{
+    float: left;
+    margin: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}

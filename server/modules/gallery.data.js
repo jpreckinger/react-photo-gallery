@@ -5,8 +5,6 @@ const galleryItems = [
     { id: 4, path: 'images/teddy.jpg', description: 'Photo of a corgi puppy named Teddy I met at work.', likes: 0 },
     { id: 5, path: 'images/maya.jpg', description: 'Photo of a a good dog I met at work named Maya.', likes: 0 },
     { id: 6, path: 'images/chipmunk.jpg', description: 'Photo of a chipmunk I took at Rocky Mountain National Park.', likes: 0 },
-    { id: 7, path: 'images/seal.jpg', description: 'Photo of a seal puppet I took at the San Fransisco Aquarium.', likes: 0 },
-
 ];
 
 module.exports = galleryItems;
