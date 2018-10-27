@@ -24,9 +24,9 @@ class GalleryItem extends Component {
     render() {
         const isClicked = this.state.isClicked;
         return (
-            <div className='box'>
+            <div onClick={this.handleClick} className='box'>
                 {isClicked ? (
-                    <p onClick={this.handleClick}>{this.props.galleryItem.description}</p>
+                    <p>{this.props.galleryItem.description}</p>
                 ) : (
                     <p><img onClick={this.handleClick} src={this.props.galleryItem.path}
                     alt={this.props.galleryItem.description}/></p>
