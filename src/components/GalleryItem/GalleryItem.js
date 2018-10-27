@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './GalleryItem.css'
 
 class GalleryItem extends Component {
 
@@ -23,7 +24,7 @@ class GalleryItem extends Component {
     render() {
         const isClicked = this.state.isClicked;
         return (
-            <div>
+            <div className='box'>
                 {isClicked ? (
                     <p onClick={this.handleClick}>{this.props.galleryItem.description}</p>
                 ) : (
