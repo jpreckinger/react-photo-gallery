@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    gallery: []
+  };
+
+  getGallery = () => {
+    axios.get('/gallery').then((response)
+      this.setState({
+        gallery: [response]
+      })
+      console.log(state.gallery);
+    ).catch((error) =>{
+      console.log('error getting gallery', error);
+    })
+  }
+
+
+
   render() {
     return (
       <div className="App">
