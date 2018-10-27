@@ -1,6 +1,6 @@
 const galleryItems = [
     { id: 1, path: 'mochi.jpg', description: 'Photo of my cat Mochi', likes: 0 },
-    { id: 2, path: 'miso.jpg', description: 'Photo of a my buddy Miso.', likes: 0 },
+    { id: 2, path: 'miso.jpg', description: 'Photo of my buddy Miso.', likes: 0 },
     { id: 3, path: 'ranger.jpg', description: "Photo of my friend's mom's dog, Ranger.", likes: 0 },
     { id: 4, path: 'teddy.jpg', description: 'Photo of a corgi puppy named Teddy I met at work.', likes: 0 },
     { id: 5, path: 'maya.jpg', description: 'Photo of a a good dog I met at work named Maya.', likes: 0 },

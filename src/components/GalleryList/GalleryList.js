@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import './App.css';
 
 class GalleryList extends Component {
 
+    componentDidMount() {
+        console.log('PROPS', this.props.galleryList);
+    }
+
   render() {
     return (
-        <p>Gallery goes here</p>
+        <div>
+            {
+                this.props.galleryList.map( image =>
+                <li key={image.id}>
+                    {image.description}
+                </li>
+                )
+            } 
+        </div>
     );
   }
 }
