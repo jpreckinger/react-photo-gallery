@@ -28,8 +28,8 @@ class GalleryItem extends Component {
                 {isClicked ? (
                     <p onClick={this.handleClick}>{this.props.galleryItem.description}</p>
                 ) : (
-                    <img onClick={this.handleClick} src={this.props.galleryItem.path}
-                    alt={this.props.galleryItem.description}/>
+                    <p><img onClick={this.handleClick} src={this.props.galleryItem.path}
+                    alt={this.props.galleryItem.description}/></p>
                 )}
             </div>
         );

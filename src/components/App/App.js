@@ -33,9 +33,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <ul>
           <GalleryList galleryList={this.state.gallery} />
-        </ul>
       </div>
     );
   }
