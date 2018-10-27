@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 
 class App extends Component {
@@ -8,17 +9,20 @@ class App extends Component {
   };
 
   getGallery = () => {
-    axios.get('/gallery').then((response)
+    axios.get('/gallery')
+    .then((response) => {
       this.setState({
         gallery: [response]
       })
-      console.log(state.gallery);
-    ).catch((error) =>{
+      console.log(this.state.gallery);
+    }).catch((error) => {
       console.log('error getting gallery', error);
     })
   }
 
-
+  componentDidMount() {
+    this.getGallery();
+  }
 
   render() {
     return (
