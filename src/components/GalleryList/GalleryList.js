@@ -12,6 +12,8 @@ class GalleryList extends Component {
                     <section key={image.id} className="row">
                         <div className="column">
                             <GalleryItem galleryItem={image} />
+                            <button onClick={() => this.props.loveIt(image.id)}>Love it!</button>
+                            <p>{image.likes} people love this!</p> 
                         </div>
                     </section>
                 )

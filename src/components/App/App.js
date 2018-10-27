@@ -21,6 +21,16 @@ class App extends Component {
     })
   }
 
+  loveIt = (id) => {
+    console.log('In love it', id);
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${id}`,
+    }).then((response) => {
+      this.getGallery();
+    })
+  }
+
   componentDidMount() {
     console.log('In compDidMount');
     this.getGallery();
@@ -33,7 +43,8 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-          <GalleryList galleryList={this.state.gallery} />
+          <GalleryList galleryList={this.state.gallery}
+                      loveIt={this.loveIt} />
       </div>
     );
   }
