@@ -4,10 +4,6 @@ import './GalleryList.css';
 
 class GalleryList extends Component {
 
-    componentDidMount() {
-        console.log('PROPS', this.props.galleryList);
-    }
-
   render() {
     return (
         <div>
