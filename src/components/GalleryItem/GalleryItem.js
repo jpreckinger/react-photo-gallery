@@ -17,12 +17,20 @@ class GalleryItem extends Component {
                 isClicked: false
             })
         }
+        
     }
 
     render() {
+        const isClicked = this.state.isClicked;
         return (
-            <img onClick={this.handleClick} src={this.props.galleryItem.path}
-            alt={this.props.galleryItem.description}/>
+            <div>
+                {isClicked ? (
+                    <p onClick={this.handleClick}>{this.props.galleryItem.description}</p>
+                ) : (
+                    <img onClick={this.handleClick} src={this.props.galleryItem.path}
+                    alt={this.props.galleryItem.description}/>
+                )}
+            </div>
         );
     }
 }
