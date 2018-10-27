@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    gallery: []
+  };
+
+  getGallery = () => {
+    axios.get('/gallery')
+    .then((response) => {
+      this.setState({
+        gallery: [response]
+      })
+      console.log(this.state.gallery);
+    }).catch((error) => {
+      console.log('error getting gallery', error);
+    })
+  }
+
+  componentDidMount() {
+    this.getGallery();
+  }
+
   render() {
     return (
       <div className="App">
@@ -10,7 +32,7 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        {/* <img src="images/goat_small.jpg"/> */}
       </div>
     );
   }
