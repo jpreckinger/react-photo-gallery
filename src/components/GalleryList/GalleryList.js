@@ -3,10 +3,6 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 class GalleryList extends Component {
 
-    componentDidMount() {
-        console.log('PROPS', this.props.galleryList);
-    }
-
   render() {
     return (
         <div>
