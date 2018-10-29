@@ -4,6 +4,7 @@ import './GalleryList.css';
 
 class GalleryList extends Component {
 
+    // method to adjust the text on the DOM to be more gramitically accurate
     setText = (image) => {
         let amountOfLove = '';
         if(image === 0) {
@@ -14,14 +15,16 @@ class GalleryList extends Component {
             amountOfLove = image + ' people love this!';
         }
         return amountOfLove;
-    }
+    } // end setText
 
   render() {
 
     return (
         <div>
-            {
-                this.props.galleryList.map( image =>
+            {/* this will receive the gallery, iterate through it, and send each individual
+            object through to the next component that will display it on the DOM. */}
+            {   
+                this.props.galleryList.map( image => 
                     <section key={image.id} className="row">
                         <div className="column">
                             <GalleryItem galleryItem={image} />

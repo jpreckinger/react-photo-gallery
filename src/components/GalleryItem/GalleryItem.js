@@ -7,6 +7,9 @@ class GalleryItem extends Component {
         isClicked: false
     }
 
+    // method to set state for conditional rendering
+    // allowing a user to click a photograph and have it
+    // switch to displaying the text instead.
     handleClick = () => {
         console.log('icClicked before click is', this.state.isClicked);
         if(this.state.isClicked === false){
@@ -19,7 +22,7 @@ class GalleryItem extends Component {
             })
         }
         
-    }
+    } // end handleClick
 
     render() {
         const isClicked = this.state.isClicked;

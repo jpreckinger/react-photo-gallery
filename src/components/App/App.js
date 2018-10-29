@@ -9,6 +9,8 @@ class App extends Component {
     gallery: []
   };
 
+  // method to retrieve the photos from the server
+  // and store them in state.gallery
   getGallery = () => {
     axios.get('/gallery')
     .then((response) => {
@@ -19,8 +21,10 @@ class App extends Component {
     }).catch((error) => {
       console.log('error getting gallery', error);
     })
-  }
+  } // end getGallery
 
+  // method to send to a photo's id to the server
+  // to adjust the amount of likes on that particular photo
   loveIt = (id) => {
     console.log('In love it', id);
     axios({
@@ -29,12 +33,15 @@ class App extends Component {
     }).then((response) => {
       this.getGallery();
     })
-  }
+  } //end loveIt
 
+  // method that runs when the component has mounted, which then
+  // calls the getGallery method, appending the photos and other
+  // relevent elements to the DOM
   componentDidMount() {
     console.log('In compDidMount');
     this.getGallery();
-  }
+  } // end componentDidMount
 
   render() {
     return (
@@ -43,7 +50,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-          <GalleryList galleryList={this.state.gallery}
+          <GalleryList galleryList={this.state.gallery} // sending the photos into the other components
                       loveIt={this.loveIt} />
       </div>
     );
